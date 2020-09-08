@@ -87,7 +87,7 @@ PD_ENSEMBLE<-function(data,pp,cp,mp,models,seed1,seed2)
                               fixedWindow    = TRUE,
                               allowParallel  = TRUE,
                               savePredictions="final")
-    #Train and predict each component with different models - 5 components x 6 models 
+    #Train and predict each component with different models - 5 components x 5 models 
     
     for(m in 1:length(models))
     {
