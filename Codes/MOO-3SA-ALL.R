@@ -86,7 +86,7 @@ PD_ENSEMBLE<-function(data,pp,cp,mp,models,seed1,seed2)
                               fixedWindow    = TRUE,
                               allowParallel  = TRUE,
                               savePredictions="final")
-    #Train and predict each component with different models - 5 components x 6 models 
+    #Train and predict each component with different models - 5 components x 5 models 
     
     for(m in 1:length(models))
     {
@@ -139,9 +139,9 @@ PD_ENSEMBLE<-function(data,pp,cp,mp,models,seed1,seed2)
     }    
       
       #------------------Recursive prediction for test set-----------
-      for(N in 1:3)  #número de colunas do obs
+      for(N in 1:3)  #nÃºmero de colunas do obs
       {
-        for(v in 1:4)#número de linhas do obs
+        for(v in 1:4)#nÃºmero de linhas do obs
         {
           p<-obsTE[v,N]
           if(p==obsTE[v,1])
